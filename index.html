@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandyPJC — Professional Projector Control</title>
+    <meta name="description" content="HandyPJC is a professional iOS app for controlling PJLink projectors. Manage power, inputs, and groups from your iPhone or iPad.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">⎔ <span>HandyPJC</span></a>
+        <div class="nav-links">
+            <a href="privacy.html" id="nav-privacy">Privacy</a>
+            <a href="support.html" id="nav-support">Support</a>
+            <div class="lang-switch">
+                <a href="#" class="active" onclick="setLang('en')">EN</a>
+                <a href="#" onclick="setLang('zh')">中文</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-icon">⎔</div>
+    <h1 id="hero-title">HandyPJC</h1>
+    <p id="hero-sub">Professional projector control at your fingertips. Power, switch inputs, and manage groups — all via PJLink protocol.</p>
+    <div class="badge-row">
+        <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+            <span>PJLink Class 1</span>
+        </div>
+        <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+            <span id="badge-ios">iOS 17+</span>
+        </div>
+        <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span id="badge-privacy">Privacy First</span>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="feature-card">
+        <div class="icon">⚡</div>
+        <h3 id="f1-title">Instant Control</h3>
+        <p id="f1-desc">Power on/off, switch inputs, and mute projectors with a single tap. No complicated setup required.</p>
+    </div>
+    <div class="feature-card">
+        <div class="icon">📡</div>
+        <h3 id="f2-title">Auto Discovery</h3>
+        <p id="f2-desc">Automatically scan your local network to discover PJLink-compatible projectors. Add them in seconds.</p>
+    </div>
+    <div class="feature-card">
+        <div class="icon">👥</div>
+        <h3 id="f3-title">Group Management</h3>
+        <p id="f3-desc">Organize projectors into groups and control them all at once — perfect for conference rooms and classrooms.</p>
+    </div>
+    <div class="feature-card">
+        <div class="icon">☁️</div>
+        <h3 id="f4-title">iCloud Sync</h3>
+        <p id="f4-desc">Your projector configurations sync across all your devices via iCloud. Set up once, use everywhere.</p>
+    </div>
+    <div class="feature-card">
+        <div class="icon">👑</div>
+        <h3 id="f5-title">HandyPJC Pro</h3>
+        <p id="f5-desc">Upgrade to remove ads, unlock unlimited projectors, and enable powerful group management.</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <span>© 2025 Pisces Studio. All rights reserved.</span>
+        <div class="footer-links">
+            <a href="privacy.html" id="footer-privacy">Privacy Policy</a>
+            <a href="support.html" id="footer-support">Support</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+const i18n = {
+    en: {
+        'nav-privacy': 'Privacy',
+        'nav-support': 'Support',
+        'hero-title': 'HandyPJC',
+        'hero-sub': 'Professional projector control at your fingertips. Power, switch inputs, and manage groups — all via PJLink protocol.',
+        'badge-privacy': 'Privacy First',
+        'f1-title': 'Instant Control',
+        'f1-desc': 'Power on/off, switch inputs, and mute projectors with a single tap. No complicated setup required.',
+        'f2-title': 'Auto Discovery',
+        'f2-desc': 'Automatically scan your local network to discover PJLink-compatible projectors. Add them in seconds.',
+        'f3-title': 'Group Management',
+        'f3-desc': 'Organize projectors into groups and control them all at once — perfect for conference rooms and classrooms.',
+        'f4-title': 'iCloud Sync',
+        'f4-desc': 'Your projector configurations sync across all your devices via iCloud. Set up once, use everywhere.',
+        'f5-title': 'HandyPJC Pro',
+        'f5-desc': 'Upgrade to remove ads, unlock unlimited projectors, and enable powerful group management.',
+        'footer-privacy': 'Privacy Policy',
+        'footer-support': 'Support'
+    },
+    zh: {
+        'nav-privacy': '隱私權',
+        'nav-support': '支援',
+        'hero-title': '掌中投控',
+        'hero-sub': '專業的投影機遙控工具，輕鬆操控電源、切換訊號源、管理群組——全面支援 PJLink 協定。',
+        'badge-privacy': '隱私優先',
+        'f1-title': '即時控制',
+        'f1-desc': '一鍵開關電源、切換訊號源、靜音投影機，無需繁複設定。',
+        'f2-title': '自動探索',
+        'f2-desc': '自動掃描區域網路，探索相容 PJLink 的投影機，數秒內即可新增。',
+        'f3-title': '群組管理',
+        'f3-desc': '將投影機分組管理，一次操控全部——會議室與教室的最佳選擇。',
+        'f4-title': 'iCloud 同步',
+        'f4-desc': '您的投影機設定透過 iCloud 在所有裝置間同步。設定一次，隨處使用。',
+        'f5-title': '掌中投控 Pro',
+        'f5-desc': '升級以移除廣告、解鎖無限投影機，並啟用強大的群組管理功能。',
+        'footer-privacy': '隱私權政策',
+        'footer-support': '支援'
+    }
+};
+
+function setLang(lang) {
+    const data = i18n[lang];
+    for (const [id, text] of Object.entries(data)) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = text;
+    }
+    document.querySelectorAll('.lang-switch a').forEach(a => a.classList.remove('active'));
+    document.querySelector(`.lang-switch a[onclick="setLang('${lang}')"]`).classList.add('active');
+    document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : 'en';
+    localStorage.setItem('lang', lang);
+}
+
+// Auto-detect language
+(function() {
+    const saved = localStorage.getItem('lang');
+    if (saved) { setLang(saved); return; }
+    const browserLang = navigator.language || navigator.userLanguage;
+    if (browserLang && browserLang.startsWith('zh')) setLang('zh');
+})();
+</script>
+</body>
+</html>
