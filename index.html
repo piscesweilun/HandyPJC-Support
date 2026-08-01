@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HandyPJC — Professional Projector Control</title>
-    <meta name="description" content="HandyPJC is a professional iOS app for controlling PJLink projectors. Manage power, inputs, and groups from your iPhone or iPad.">
+    <meta name="description" content="HandyPJC is a professional PJLink projector control app for iPhone, iPad, and Apple Watch, with scenes, health checks, and maintenance tools.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav class="nav">
     <div class="nav-inner">
-        <a href="index.html" class="nav-logo">⎔ <span>HandyPJC</span></a>
+        <a href="index.html" class="nav-logo">⎔ <span id="nav-name">HandyPJC</span></a>
         <div class="nav-links">
             <a href="privacy.html" id="nav-privacy">Privacy</a>
             <a href="support.html" id="nav-support">Support</a>
@@ -26,15 +26,23 @@
 <section class="hero">
     <div class="hero-icon">⎔</div>
     <h1 id="hero-title">HandyPJC</h1>
-    <p id="hero-sub">Professional projector control at your fingertips. Power, switch inputs, and manage groups — all via PJLink protocol.</p>
+    <p id="hero-sub">Control venues, run multi-step scenes, and check projector health from iPhone, iPad, or Apple Watch.</p>
+    <div class="hero-actions">
+        <a class="primary-button" href="https://apps.apple.com/app/id1540087282" target="_blank" rel="noopener noreferrer" id="download-button">View on the App Store</a>
+        <a class="secondary-button" href="support.html" id="learn-button">Setup &amp; Support</a>
+    </div>
     <div class="badge-row">
         <div class="badge">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
-            <span>PJLink Class 1</span>
+            <span>PJLink Class 1 &amp; 2</span>
         </div>
         <div class="badge">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
             <span id="badge-ios">iOS 17+</span>
+        </div>
+        <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="4"/><path d="M9 2V1m6 1V1M9 22v1m6-1v1"/></svg>
+            <span id="badge-watch">Apple Watch</span>
         </div>
         <div class="badge">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -46,8 +54,8 @@
 <section class="features">
     <div class="feature-card">
         <div class="icon">⚡</div>
-        <h3 id="f1-title">Instant Control</h3>
-        <p id="f1-desc">Power on/off, switch inputs, and mute projectors with a single tap. No complicated setup required.</p>
+        <h3 id="f1-title">Complete Control</h3>
+        <p id="f1-desc">Control power, inputs, image blanking, and audio mute independently from one clear dashboard.</p>
     </div>
     <div class="feature-card">
         <div class="icon">📡</div>
@@ -56,18 +64,28 @@
     </div>
     <div class="feature-card">
         <div class="icon">👥</div>
-        <h3 id="f3-title">Group Management</h3>
-        <p id="f3-desc">Organize projectors into groups and control them all at once — perfect for conference rooms and classrooms.</p>
+        <h3 id="f3-title">Smart Scenes</h3>
+        <p id="f3-desc">Build reusable multi-step workflows with staggered startup, readiness checks, retries, and run history.</p>
     </div>
     <div class="feature-card">
         <div class="icon">☁️</div>
-        <h3 id="f4-title">iCloud Sync</h3>
-        <p id="f4-desc">Your projector configurations sync across all your devices via iCloud. Set up once, use everywhere.</p>
+        <h3 id="f4-title">Apple Watch Control</h3>
+        <p id="f4-desc">Run pinned scenes, check venue health, control power, and handle urgent image or audio changes from your wrist.</p>
     </div>
     <div class="feature-card">
+        <div class="icon">🩺</div>
+        <h3 id="f5-title">Health &amp; Maintenance</h3>
+        <p id="f5-desc">Inspect every projector at once, track lamp and filter hours, set thresholds, and export maintenance records.</p>
+    </div>
+    <div class="feature-card">
+        <div class="icon">☁️</div>
+        <h3 id="f6-title">iCloud Sync</h3>
+        <p id="f6-desc">Keep projector, group, and scene configurations synchronized across your Apple devices.</p>
+    </div>
+    <div class="feature-card feature-card-wide">
         <div class="icon">👑</div>
-        <h3 id="f5-title">HandyPJC Pro</h3>
-        <p id="f5-desc">Upgrade to remove ads, unlock unlimited projectors, and enable powerful group management.</p>
+        <h3 id="f7-title">HandyPJC Pro</h3>
+        <p id="f7-desc">A one-time upgrade unlocks unlimited projectors, groups, scenes, Apple Watch, health and maintenance tools, and removes ads.</p>
     </div>
 </section>
 
@@ -86,38 +104,54 @@ const i18n = {
     en: {
         'nav-privacy': 'Privacy',
         'nav-support': 'Support',
+        'nav-name': 'HandyPJC',
         'hero-title': 'HandyPJC',
-        'hero-sub': 'Professional projector control at your fingertips. Power, switch inputs, and manage groups — all via PJLink protocol.',
+        'hero-sub': 'Control venues, run multi-step scenes, and check projector health from iPhone, iPad, or Apple Watch.',
+        'download-button': 'View on the App Store',
+        'learn-button': 'Setup & Support',
+        'badge-watch': 'Apple Watch',
         'badge-privacy': 'Privacy First',
-        'f1-title': 'Instant Control',
-        'f1-desc': 'Power on/off, switch inputs, and mute projectors with a single tap. No complicated setup required.',
+        'f1-title': 'Complete Control',
+        'f1-desc': 'Control power, inputs, image blanking, and audio mute independently from one clear dashboard.',
         'f2-title': 'Auto Discovery',
         'f2-desc': 'Automatically scan your local network to discover PJLink-compatible projectors. Add them in seconds.',
-        'f3-title': 'Group Management',
-        'f3-desc': 'Organize projectors into groups and control them all at once — perfect for conference rooms and classrooms.',
-        'f4-title': 'iCloud Sync',
-        'f4-desc': 'Your projector configurations sync across all your devices via iCloud. Set up once, use everywhere.',
-        'f5-title': 'HandyPJC Pro',
-        'f5-desc': 'Upgrade to remove ads, unlock unlimited projectors, and enable powerful group management.',
+        'f3-title': 'Smart Scenes',
+        'f3-desc': 'Build reusable multi-step workflows with staggered startup, readiness checks, retries, and run history.',
+        'f4-title': 'Apple Watch Control',
+        'f4-desc': 'Run pinned scenes, check venue health, control power, and handle urgent image or audio changes from your wrist.',
+        'f5-title': 'Health & Maintenance',
+        'f5-desc': 'Inspect every projector at once, track lamp and filter hours, set thresholds, and export maintenance records.',
+        'f6-title': 'iCloud Sync',
+        'f6-desc': 'Keep projector, group, and scene configurations synchronized across your Apple devices.',
+        'f7-title': 'HandyPJC Pro',
+        'f7-desc': 'A one-time upgrade unlocks unlimited projectors, groups, scenes, Apple Watch, health and maintenance tools, and removes ads.',
         'footer-privacy': 'Privacy Policy',
         'footer-support': 'Support'
     },
     zh: {
         'nav-privacy': '隱私權',
         'nav-support': '支援',
+        'nav-name': '掌中投控',
         'hero-title': '掌中投控',
-        'hero-sub': '專業的投影機遙控工具，輕鬆操控電源、切換訊號源、管理群組——全面支援 PJLink 協定。',
+        'hero-sub': '透過 iPhone、iPad 或 Apple Watch 控制場地、執行多步驟場景並掌握投影機健康狀態。',
+        'download-button': '前往 App Store',
+        'learn-button': '設定與支援',
+        'badge-watch': 'Apple Watch',
         'badge-privacy': '隱私優先',
-        'f1-title': '即時控制',
-        'f1-desc': '一鍵開關電源、切換訊號源、靜音投影機，無需繁複設定。',
+        'f1-title': '完整控制',
+        'f1-desc': '在清楚的控制介面中，分別控制電源、訊號來源、關閉影像及聲音靜音。',
         'f2-title': '自動探索',
         'f2-desc': '自動掃描區域網路，探索相容 PJLink 的投影機，數秒內即可新增。',
-        'f3-title': '群組管理',
-        'f3-desc': '將投影機分組管理，一次操控全部——會議室與教室的最佳選擇。',
-        'f4-title': 'iCloud 同步',
-        'f4-desc': '您的投影機設定透過 iCloud 在所有裝置間同步。設定一次，隨處使用。',
-        'f5-title': '掌中投控 Pro',
-        'f5-desc': '升級以移除廣告、解鎖無限投影機，並啟用強大的群組管理功能。',
+        'f3-title': '智慧場景',
+        'f3-desc': '建立可重複使用的多步驟流程，支援分批啟動、就緒確認、失敗重試及執行紀錄。',
+        'f4-title': 'Apple Watch 控制',
+        'f4-desc': '從手腕執行置頂場景、查看場地健康、控制電源，並處理緊急影像或聲音切換。',
+        'f5-title': '健康與維護',
+        'f5-desc': '一次巡檢所有投影機，追蹤燈泡與濾網時數、設定門檻並匯出維護紀錄。',
+        'f6-title': 'iCloud 同步',
+        'f6-desc': '在 Apple 裝置間同步投影機、群組與場景設定。',
+        'f7-title': '掌中投控 Pro',
+        'f7-desc': '一次性升級即可解鎖無限投影機、群組、場景、Apple Watch、健康與維護工具，並移除廣告。',
         'footer-privacy': '隱私權政策',
         'footer-support': '支援'
     }

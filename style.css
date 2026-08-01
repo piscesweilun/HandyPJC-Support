@@ -134,8 +134,46 @@ body {
   margin: 0 auto;
 }
 
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.primary-button {
+  color: white;
+  background: linear-gradient(135deg, var(--accent), #8b5cf6);
+}
+
+.secondary-button {
+  color: var(--text);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+  transform: translateY(-1px);
+}
+
 .badge-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
   margin-top: 32px;
@@ -196,6 +234,10 @@ body {
   color: var(--text-secondary);
 }
 
+.feature-card-wide {
+  grid-column: 1 / -1;
+}
+
 /* Content Pages */
 .content {
   max-width: var(--max-w);
@@ -247,6 +289,32 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 16px;
   margin: 32px 0;
+}
+
+.version-callout {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 22px;
+  margin: 0 0 28px;
+  border: 1px solid rgba(99,102,241,0.35);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(168,85,247,0.08));
+}
+
+.version-callout p {
+  margin: 4px 0 0;
+  font-size: 14px;
+}
+
+.version-label {
+  flex: 0 0 auto;
+  padding: 4px 10px;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .support-card {
@@ -339,8 +407,13 @@ body {
 /* Responsive */
 @media (max-width: 600px) {
   .hero h1 { font-size: 28px; }
+  .hero { padding-top: 56px; }
+  .hero-actions { flex-direction: column; }
+  .primary-button, .secondary-button { width: 100%; }
   .features { grid-template-columns: 1fr; }
+  .feature-card-wide { grid-column: auto; }
   .support-grid { grid-template-columns: 1fr; }
+  .version-callout { flex-direction: column; gap: 12px; }
   .footer-inner { flex-direction: column; gap: 12px; }
   .nav-links a:not(.lang-switch a) { display: none; }
 }

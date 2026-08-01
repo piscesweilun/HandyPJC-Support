@@ -11,7 +11,7 @@
 
 <nav class="nav">
     <div class="nav-inner">
-        <a href="index.html" class="nav-logo">⎔ <span>HandyPJC</span></a>
+        <a href="index.html" class="nav-logo">⎔ <span id="nav-name">HandyPJC</span></a>
         <div class="nav-links">
             <a href="privacy.html" id="nav-privacy">Privacy</a>
             <a href="support.html" class="active" id="nav-support">Support</a>
@@ -28,6 +28,13 @@
     <p class="updated" id="page-sub">We're here to help you get the most out of HandyPJC.</p>
 
     <div id="content-en">
+        <div class="version-callout">
+            <span class="version-label">Version 3.0</span>
+            <div>
+                <strong>HandyPJC now works with Apple Watch.</strong>
+                <p>Run pinned scenes, inspect venue health, manage maintenance, and control image blanking or audio mute independently.</p>
+            </div>
+        </div>
         <div class="support-grid">
             <div class="support-card">
                 <div class="icon">📧</div>
@@ -47,17 +54,37 @@
 
         <div class="faq-item">
             <h3>What is PJLink?</h3>
-            <p>PJLink is a standard protocol for controlling projectors over a network. Most modern projectors from manufacturers like Epson, Panasonic, NEC, and Sony support PJLink Class 1. HandyPJC uses this protocol to communicate with your projectors.</p>
+            <p>PJLink is a standard protocol for controlling projectors over a network. Many projectors from manufacturers such as Epson, Panasonic, NEC, and Sony support PJLink Class 1 or Class 2. HandyPJC supports both classes; available commands and maintenance information depend on the projector model.</p>
         </div>
 
         <div class="faq-item">
             <h3>My projector is not found during network scan</h3>
-            <p>Make sure your iPhone/iPad and the projector are connected to the same Wi-Fi network. Also verify that PJLink is enabled in your projector's network settings. Some projectors require you to enable "PJLink" or "Network Control" in the settings menu.</p>
+            <p>On the Home screen, tap <strong>＋</strong>, then <strong>Network Scan</strong>. Make sure your iPhone or iPad and projector are on the same local network, Local Network permission is enabled for HandyPJC, client isolation is disabled on Wi-Fi, and PJLink or Network Control is enabled on the projector. You can also choose <strong>＋ &gt; Add Projector</strong> to enter the IP address manually.</p>
         </div>
 
         <div class="faq-item">
             <h3>I get an "Authentication Failed" error</h3>
             <p>Your projector requires a PJLink password. HandyPJC tries common default passwords automatically, but if your projector uses a custom password, you'll need to enter it manually. Go to the projector's edit screen and set the correct password.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I run a scene quickly?</h3>
+            <p>Pin the scene in its editor. It will appear under <strong>Pinned Scenes</strong> on the iPhone or iPad Home screen and in the HandyPJC Apple Watch app. Tap the scene, review any confirmation, then choose <strong>Run</strong>. Keep the paired iPhone reachable while running a scene from Apple Watch.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Why does Apple Watch not show my latest scene?</h3>
+            <p>Confirm the scene is pinned, then open HandyPJC on the iPhone once to refresh Watch data. Keep Bluetooth and Wi-Fi enabled and make sure the Watch app is installed. Apple Watch sends commands through the paired iPhone; it does not connect directly to projectors.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do image blanking and audio mute work?</h3>
+            <p>They are independent controls. <strong>Blank Image</strong> hides the projected image without powering the projector off; <strong>Restore Image</strong> shows it again. <strong>Mute Audio</strong> and <strong>Unmute Audio</strong> control projector audio when the model supports it.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What do Ready, Warning, Failed, and Unknown mean?</h3>
+            <p><strong>Ready</strong> means the projector responded normally. <strong>Warning</strong> indicates a reported device or maintenance warning. <strong>Failed</strong> means the check could not complete, for example because the device was offline or authentication failed. <strong>Unknown</strong> means there is no recent result. Tap the shield button on Home, then run <strong>Inspect All</strong> to refresh the venue.</p>
         </div>
 
         <div class="faq-item">
@@ -67,24 +94,31 @@
 
         <div class="faq-item">
             <h3>How do I delete all my data?</h3>
-            <p>Simply uninstall the App from your device. All local data and Keychain entries will be removed. If iCloud sync is enabled, you can also clear iCloud data from Settings > [Your Name] > iCloud > Manage Storage.</p>
+            <p>Delete projectors in HandyPJC first so their saved PJLink passwords are removed from Keychain, then uninstall the App to remove its local database and preferences. If iCloud sync is active, you can separately manage the App's private iCloud data from your Apple Account and iCloud storage settings.</p>
         </div>
 
         <div class="faq-item">
             <h3>How do I remove ads?</h3>
-            <p>You can purchase "HandyPJC Pro" from the Settings menu. This one-time purchase removes all advertisements, unlocks unlimited projectors, and enables group management features.</p>
+            <p>Purchase <strong>HandyPJC Pro</strong> from Settings. This one-time purchase removes ads and unlocks unlimited projectors, groups, scenes, Apple Watch, health checks, and maintenance tools. If you already purchased Pro, choose <strong>Restore Purchases</strong> while signed in with the same Apple Account.</p>
         </div>
 
         <h2>System Requirements</h2>
         <ul>
             <li>iOS 17.0 or later</li>
-            <li>iPhone or iPad</li>
+            <li>iPhone or iPad; Apple Watch features require watchOS 10.0 or later</li>
             <li>Wi-Fi connection on the same network as your projectors</li>
-            <li>Projectors with PJLink Class 1 support</li>
+            <li>Projectors with PJLink Class 1 or Class 2 support</li>
         </ul>
     </div>
 
     <div id="content-zh" style="display:none">
+        <div class="version-callout">
+            <span class="version-label">版本 3.0</span>
+            <div>
+                <strong>掌中投控現已支援 Apple Watch。</strong>
+                <p>從手腕執行置頂場景、查看場地健康、管理維護資訊，並分別控制關閉影像或聲音靜音。</p>
+            </div>
+        </div>
         <div class="support-grid">
             <div class="support-card">
                 <div class="icon">📧</div>
@@ -104,17 +138,37 @@
 
         <div class="faq-item">
             <h3>什麼是 PJLink？</h3>
-            <p>PJLink 是一種透過網路控制投影機的標準協定。大多數來自 Epson、Panasonic、NEC、Sony 等品牌的現代投影機都支援 PJLink Class 1。掌中投控使用此協定與您的投影機通訊。</p>
+            <p>PJLink 是一種透過網路控制投影機的標準協定。Epson、Panasonic、NEC、Sony 等品牌的許多投影機支援 PJLink Class 1 或 Class 2。掌中投控支援兩種等級；可用指令及維護資訊仍依投影機型號而異。</p>
         </div>
 
         <div class="faq-item">
             <h3>網路掃描時找不到我的投影機</h3>
-            <p>請確認您的 iPhone/iPad 與投影機連接在同一個 Wi-Fi 網路。同時確認投影機的網路設定中已啟用 PJLink。部分投影機需要您在設定選單中啟用「PJLink」或「網路控制」功能。</p>
+            <p>在首頁點擊<strong>「＋」</strong>，再選擇<strong>「網路掃描」</strong>。請確認 iPhone 或 iPad 與投影機位於同一個區域網路、已允許掌中投控使用「區域網路」、Wi-Fi 未啟用用戶端隔離，且投影機已開啟 PJLink 或網路控制。也可以選擇<strong>「＋ &gt; 新增投影機」</strong>手動輸入 IP 位址。</p>
         </div>
 
         <div class="faq-item">
             <h3>出現「認證失敗」錯誤</h3>
             <p>您的投影機需要 PJLink 密碼。掌中投控會自動嘗試常見的預設密碼，但如果您的投影機使用了自訂密碼，則需要手動輸入。請進入投影機的編輯畫面並設定正確的密碼。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>如何快速執行場景？</h3>
+            <p>先在場景編輯頁將場景設為置頂，它便會出現在 iPhone／iPad 首頁的<strong>「置頂場景」</strong>及 Apple Watch App 中。點擊場景、確認提示後，再選擇<strong>「執行」</strong>。從 Apple Watch 執行時，請讓配對的 iPhone 保持可連線。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Apple Watch 為什麼沒有顯示最新場景？</h3>
+            <p>請先確認場景已置頂，再開啟一次 iPhone 上的掌中投控以更新 Watch 資料。請保持藍牙與 Wi-Fi 開啟，並確認 Watch App 已完成安裝。Apple Watch 會透過配對的 iPhone 傳送指令，不會直接連接投影機。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>關閉影像與聲音靜音有什麼不同？</h3>
+            <p>兩者可以分別控制。<strong>「關閉影像」</strong>會隱藏投影畫面，但不會關閉投影機；使用<strong>「恢復影像」</strong>即可重新顯示。<strong>「靜音」</strong>與<strong>「取消靜音」</strong>則控制投影機聲音，實際效果依型號是否支援而定。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>就緒、警告、失敗與未知代表什麼？</h3>
+            <p><strong>就緒</strong>表示投影機正常回應；<strong>警告</strong>表示設備或維護資訊出現警示；<strong>失敗</strong>表示巡檢未能完成，例如設備離線或認證失敗；<strong>未知</strong>表示沒有近期結果。點擊首頁的盾牌按鈕，再執行<strong>「巡檢全部」</strong>即可更新場地狀態。</p>
         </div>
 
         <div class="faq-item">
@@ -124,27 +178,27 @@
 
         <div class="faq-item">
             <h3>如何刪除所有資料？</h3>
-            <p>只需從您的裝置解除安裝應用程式即可。所有本機資料和鑰匙圈項目都會被移除。若已啟用 iCloud 同步，您也可以從「設定」>「[您的名稱]」>「iCloud」>「管理儲存空間」清除 iCloud 資料。</p>
+            <p>請先在掌中投控中刪除投影機，使其儲存於鑰匙圈的 PJLink 密碼一併移除，再解除安裝 App 以刪除本機資料庫及偏好設定。若已啟用 iCloud 同步，您也可以另外從 Apple 帳號及 iCloud 儲存空間設定管理本 App 的私人 iCloud 資料。</p>
         </div>
 
         <div class="faq-item">
             <h3>如何移除廣告？</h3>
-            <p>您可以在「設定」選單中購買「掌中投控 Pro」。這是一次性購買，將移除所有廣告、解鎖無限投影機，並啟用群組管理功能。</p>
+            <p>您可以在「設定」購買<strong>「掌中投控 Pro」</strong>。這是一次性購買，將移除廣告，並解鎖無限投影機、群組、場景、Apple Watch、健康巡檢及維護工具。若已購買過，請使用相同 Apple 帳號並點擊<strong>「恢復購買」</strong>。</p>
         </div>
 
         <h2>系統需求</h2>
         <ul>
             <li>iOS 17.0 或更新版本</li>
-            <li>iPhone 或 iPad</li>
+            <li>iPhone 或 iPad；Apple Watch 功能需要 watchOS 10.0 或更新版本</li>
             <li>與投影機在同一網路的 Wi-Fi 連線</li>
-            <li>支援 PJLink Class 1 的投影機</li>
+            <li>支援 PJLink Class 1 或 Class 2 的投影機</li>
         </ul>
     </div>
 </div>
 
 <footer class="footer">
     <div class="footer-inner">
-        <span>© 2025 Pisces Studio. All rights reserved.</span>
+        <span>© 2026 Pisces Studio. All rights reserved.</span>
         <div class="footer-links">
             <a href="privacy.html" id="footer-privacy">Privacy Policy</a>
             <a href="support.html" id="footer-support">Support</a>
@@ -155,12 +209,12 @@
 <script>
 const i18n = {
     en: {
-        'nav-privacy': 'Privacy', 'nav-support': 'Support',
+        'nav-privacy': 'Privacy', 'nav-support': 'Support', 'nav-name': 'HandyPJC',
         'page-title': 'Support', 'page-sub': "We're here to help you get the most out of HandyPJC.",
         'footer-privacy': 'Privacy Policy', 'footer-support': 'Support'
     },
     zh: {
-        'nav-privacy': '隱私權', 'nav-support': '支援',
+        'nav-privacy': '隱私權', 'nav-support': '支援', 'nav-name': '掌中投控',
         'page-title': '支援', 'page-sub': '我們在這裡協助您充分利用掌中投控。',
         'footer-privacy': '隱私權政策', 'footer-support': '支援'
     }

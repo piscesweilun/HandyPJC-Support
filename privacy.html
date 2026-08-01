@@ -11,7 +11,7 @@
 
 <nav class="nav">
     <div class="nav-inner">
-        <a href="index.html" class="nav-logo">⎔ <span>HandyPJC</span></a>
+        <a href="index.html" class="nav-logo">⎔ <span id="nav-name">HandyPJC</span></a>
         <div class="nav-links">
             <a href="privacy.html" class="active" id="nav-privacy">Privacy</a>
             <a href="support.html" id="nav-support">Support</a>
@@ -25,7 +25,7 @@
 
 <div class="content">
     <h1 id="page-title">Privacy Policy</h1>
-    <p class="updated" id="page-updated">Last updated: July 31, 2026</p>
+    <p class="updated" id="page-updated">Last updated: August 2, 2026</p>
 
     <div id="content-en">
         <h2>Overview</h2>
@@ -37,15 +37,20 @@
             <li><strong>Projector configurations</strong> — names, IP addresses, and port numbers of your projectors</li>
             <li><strong>Authentication credentials</strong> — PJLink passwords stored securely in the iOS Keychain</li>
             <li><strong>Group settings</strong> — projector group names and assignments</li>
+            <li><strong>Scenes and run history</strong> — automation steps, pinned scenes, and execution results</li>
+            <li><strong>Health and maintenance records</strong> — recent device status, lamp or filter hours, thresholds, and check results</li>
             <li><strong>App preferences</strong> — such as scan timeout settings</li>
         </ul>
 
         <h2>iCloud Sync</h2>
-        <p>If you enable iCloud sync, your projector configurations and group settings are synced across your devices using Apple's CloudKit. This data is stored in your private iCloud container and is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple's Privacy Policy</a>. We do not have access to your iCloud data.</p>
+        <p>If you enable iCloud sync, your projector, group, and scene configurations are synced across your devices using Apple's CloudKit. This data is stored in your private iCloud container and is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple's Privacy Policy</a>. We do not have access to your iCloud data. PJLink passwords remain in Keychain and are not written to the iCloud database.</p>
 
         <h2>Network Access</h2>
         <p>The App communicates with projectors on your local network using the PJLink protocol (TCP port 4352). This communication happens entirely within your local area network and does not pass through any external servers.</p>
         <p>The App uses your device's camera solely for scanning IP addresses from labels or displays. Camera images are processed on-device and are never stored or transmitted.</p>
+
+        <h2>Apple Watch</h2>
+        <p>If you install the Apple Watch app, HandyPJC exchanges projector summaries, pinned scenes, health status, command requests, and progress with your paired iPhone using Apple's WatchConnectivity framework. The Watch app routes projector commands through the paired iPhone and does not send your projector credentials to Pisces Studio.</p>
 
         <h2>Advertising and Consent</h2>
         <p>The free version of HandyPJC displays advertisements using Google AdMob. Subject to your region, consent choices, and iOS tracking permission, Google and its advertising partners may process information such as your IP address or approximate location, device and advertising identifiers, app and ad interactions, and diagnostic information to deliver, measure, prevent fraud in, and improve advertising.</p>
@@ -59,7 +64,7 @@
         </ul>
 
         <h2>Data Retention</h2>
-        <p>Projector settings, credentials, groups, and preferences remain on your device until you remove them or uninstall the App. If iCloud sync is enabled, synced data may remain in your private iCloud container and can be managed through your Apple account and iCloud settings. Advertising data processed by Google is retained according to Google's policies.</p>
+        <p>Projector settings, credentials, groups, scenes, health and maintenance records, and preferences remain on your device until you remove them or uninstall the App. If iCloud sync is enabled, synced data may remain in your private iCloud container and can be managed through your Apple account and iCloud settings. Advertising data processed by Google is retained according to Google's policies.</p>
 
         <h2>Your Choices and Rights</h2>
         <p>Depending on where you live, you may have rights regarding personal data processed about you, including access, correction, deletion, objection, restriction, or withdrawal of consent. Use the in-App privacy choices and iOS settings described above for advertising controls. You may also contact us with a privacy request. Because Pisces Studio does not receive your projector configurations or PJLink credentials, we cannot retrieve those items from your device or private iCloud container.</p>
@@ -79,21 +84,26 @@
         <h2>概述</h2>
         <p>掌中投控（HandyPJC，以下稱「本應用程式」）由 Pisces Studio 開發。我們致力於保護您的隱私。本隱私權政策說明我們如何收集、使用資訊，以及您的相關權利。</p>
 
-        <h2>我們收集的資訊</h2>
+        <h2>本 App 處理的資訊</h2>
         <p>掌中投控不要求建立帳號，Pisces Studio 也未營運用來接收投影機設定或 PJLink 認證資訊的伺服器。本應用程式會在您的裝置本機儲存以下資料：</p>
         <ul>
             <li><strong>投影機設定</strong> — 投影機的名稱、IP 位址及連接埠號</li>
             <li><strong>認證資訊</strong> — PJLink 密碼安全儲存於 iOS 鑰匙圈（Keychain）</li>
             <li><strong>群組設定</strong> — 投影機群組的名稱及分配</li>
+            <li><strong>場景與執行紀錄</strong> — 自動化步驟、置頂場景及執行結果</li>
+            <li><strong>健康與維護紀錄</strong> — 最近設備狀態、燈泡或濾網時數、門檻及巡檢結果</li>
             <li><strong>應用程式偏好設定</strong> — 例如掃描逾時等設定</li>
         </ul>
 
         <h2>iCloud 同步</h2>
-        <p>若您啟用 iCloud 同步功能，投影機設定與群組設定將透過 Apple 的 CloudKit 在您的裝置間同步。這些資料儲存在您的私人 iCloud 容器中，受 <a href="https://www.apple.com/tw/legal/privacy/" target="_blank">Apple 隱私權政策</a>的規範。我們無法存取您的 iCloud 資料。</p>
+        <p>若您啟用 iCloud 同步功能，投影機、群組及場景設定將透過 Apple 的 CloudKit 在您的裝置間同步。這些資料儲存在您的私人 iCloud 容器中，受 <a href="https://www.apple.com/tw/legal/privacy/" target="_blank">Apple 隱私權政策</a>的規範。我們無法存取您的 iCloud 資料。PJLink 密碼仍保留於鑰匙圈，不會寫入 iCloud 資料庫。</p>
 
         <h2>網路存取</h2>
         <p>本應用程式透過 PJLink 協定（TCP 連接埠 4352）與您區域網路中的投影機通訊。所有通訊均在您的區域網路內進行，不會經過任何外部伺服器。</p>
         <p>本應用程式使用您裝置的相機僅用於掃描標籤或螢幕上的 IP 位址。相機影像在裝置上處理，不會被儲存或傳輸。</p>
+
+        <h2>Apple Watch</h2>
+        <p>若您安裝 Apple Watch App，掌中投控會透過 Apple 的 WatchConnectivity 框架，與配對的 iPhone 交換投影機摘要、置頂場景、健康狀態、控制請求及執行進度。Watch App 會透過配對的 iPhone 傳送投影機指令，不會將投影機認證資訊傳送給 Pisces Studio。</p>
 
         <h2>廣告與同意選項</h2>
         <p>掌中投控免費版使用 Google AdMob 顯示廣告。依照您所在的地區、同意選擇及 iOS 追蹤權限，Google 及其廣告合作夥伴可能處理您的 IP 位址或大概位置、裝置與廣告識別碼、應用程式與廣告互動資料，以及診斷資訊，用於提供及評估廣告、防止詐欺並改善廣告服務。</p>
@@ -107,7 +117,7 @@
         </ul>
 
         <h2>資料保留</h2>
-        <p>投影機設定、認證資訊、群組及偏好設定會保留在您的裝置上，直到您自行移除或解除安裝本應用程式。若已啟用 iCloud 同步，同步資料可能仍保留在您的私人 iCloud 容器，您可以透過 Apple 帳號及 iCloud 設定管理。Google 所處理之廣告資料則依 Google 的政策保留。</p>
+        <p>投影機設定、認證資訊、群組、場景、健康與維護紀錄及偏好設定會保留在您的裝置上，直到您自行移除或解除安裝本應用程式。若已啟用 iCloud 同步，同步資料可能仍保留在您的私人 iCloud 容器，您可以透過 Apple 帳號及 iCloud 設定管理。Google 所處理之廣告資料則依 Google 的政策保留。</p>
 
         <h2>您的選擇與權利</h2>
         <p>依您所在的地區，您可能享有個人資料存取、更正、刪除、反對、限制處理或撤回同意等權利。廣告相關控制可使用上述應用程式內隱私權選項及 iOS 設定，亦可聯絡我們提出隱私權請求。由於 Pisces Studio 不會接收您的投影機設定或 PJLink 認證資訊，我們無法從您的裝置或私人 iCloud 容器擷取這些資料。</p>
@@ -137,13 +147,13 @@
 <script>
 const i18n = {
     en: {
-        'nav-privacy': 'Privacy', 'nav-support': 'Support',
-        'page-title': 'Privacy Policy', 'page-updated': 'Last updated: July 31, 2026',
+        'nav-privacy': 'Privacy', 'nav-support': 'Support', 'nav-name': 'HandyPJC',
+        'page-title': 'Privacy Policy', 'page-updated': 'Last updated: August 2, 2026',
         'footer-privacy': 'Privacy Policy', 'footer-support': 'Support'
     },
     zh: {
-        'nav-privacy': '隱私權', 'nav-support': '支援',
-        'page-title': '隱私權政策', 'page-updated': '最後更新：2026 年 7 月 31 日',
+        'nav-privacy': '隱私權', 'nav-support': '支援', 'nav-name': '掌中投控',
+        'page-title': '隱私權政策', 'page-updated': '最後更新：2026 年 8 月 2 日',
         'footer-privacy': '隱私權政策', 'footer-support': '支援'
     }
 };
