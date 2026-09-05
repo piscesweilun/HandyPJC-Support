@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support — HandyPJC</title>
-    <meta name="description" content="Get help with HandyPJC. FAQ, troubleshooting, and contact support.">
+    <meta name="description" content="Support for HandyPJC on iOS and Android. Setup, troubleshooting, downloads, and contact information.">
     <meta property="og:image" content="assets/app-icon.png">
     <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
@@ -18,6 +18,7 @@
         <div class="nav-links">
             <a href="privacy.html" id="nav-privacy">Privacy</a>
             <a href="support.html" class="active" id="nav-support">Support</a>
+            <a href="copyright.html" id="nav-copyright">Copyright</a>
             <div class="lang-switch">
                 <a href="#" class="active" onclick="setLang('en')">EN</a>
                 <a href="#" onclick="setLang('zh')">中文</a>
@@ -28,16 +29,10 @@
 
 <div class="content">
     <h1 id="page-title">Support</h1>
-    <p class="updated" id="page-sub">We're here to help you get the most out of HandyPJC.</p>
+    <p class="updated" id="page-sub">Setup and troubleshooting for HandyPJC on iOS and Android.</p>
 
     <div id="content-en">
-        <div class="version-callout">
-            <span class="version-label">Version 3.0</span>
-            <div>
-                <strong>HandyPJC now works with Apple Watch.</strong>
-                <p>Run pinned scenes, inspect venue health, manage maintenance, and control image blanking or audio mute independently.</p>
-            </div>
-        </div>
+        <div class="hero-actions platform-jumps"><a class="secondary-button" href="#android">Android</a><a class="secondary-button" href="#ios">iOS / Apple Watch</a></div>
         <div class="support-grid">
             <div class="support-card">
                 <div class="icon">📧</div>
@@ -49,9 +44,28 @@
                 <div class="icon">🐛</div>
                 <h3>Report a Bug</h3>
                 <p>Found an issue? Let us know on GitHub so we can fix it quickly.</p>
-                <a href="https://github.com/piscesweilun/HandyPJC-Support/issues" target="_blank">Open an Issue</a>
+                <a href="https://github.com/piscesweilun/HandyPJC-Support/issues" target="_blank" rel="noopener noreferrer">Open an Issue</a>
             </div>
         </div>
+
+
+        <section data-platform="android">
+            <h2>Android support</h2>
+            <p>Download <a href="https://play.google.com/store/apps/details?id=com.PiscesStudio.HandyPJC" target="_blank" rel="noopener noreferrer">HandyPJC on Google Play</a>. The Android app is also listed as Handy PJC (package: <code>com.PiscesStudio.HandyPJC</code>).</p>
+            <div class="faq-item"><h3>Connecting to a projector</h3><p>Connect your Android device and projector to the same local network. Enable PJLink or network control on the projector and check its IP address and PJLink password. If discovery fails, check for guest Wi-Fi or client isolation and try entering the IP address if your app version offers manual setup.</p></div>
+            <div class="faq-item"><h3>Compatibility, features, and ads</h3><p>Check Google Play for device compatibility and the features of your installed Android version. The iOS instructions below for Apple Watch, iCloud, and Pro purchases do not apply to Android. Advertising availability depends on the installed version.</p></div>
+            <div class="faq-item"><h3>Reporting an Android issue</h3><p>Include your Android version, device model, HandyPJC version, projector model, and the steps that caused the problem. Please omit passwords and other private information.</p></div>
+        </section>
+        <h2 data-platform="ios">iOS support</h2>
+        <div class="version-callout">
+            <span class="version-label">iOS 3.0</span>
+            <div>
+                <strong>HandyPJC now works with Apple Watch.</strong>
+                <p>Run pinned scenes, inspect venue health, manage maintenance, and control image blanking or audio mute independently.</p>
+            </div>
+        </div>
+
+        <p>The following guidance covers iPhone, iPad, and Apple Watch.</p>
 
         <h2>Frequently Asked Questions</h2>
 
@@ -115,13 +129,7 @@
     </div>
 
     <div id="content-zh" style="display:none">
-        <div class="version-callout">
-            <span class="version-label">版本 3.0</span>
-            <div>
-                <strong>掌中投控現已支援 Apple Watch。</strong>
-                <p>從手腕執行置頂場景、查看場地健康、管理維護資訊，並分別控制關閉影像或聲音靜音。</p>
-            </div>
-        </div>
+        <div class="hero-actions platform-jumps"><a class="secondary-button" href="#android">Android</a><a class="secondary-button" href="#ios">iOS / Apple Watch</a></div>
         <div class="support-grid">
             <div class="support-card">
                 <div class="icon">📧</div>
@@ -133,9 +141,28 @@
                 <div class="icon">🐛</div>
                 <h3>回報問題</h3>
                 <p>發現問題了嗎？請在 GitHub 上回報，讓我們能盡快修復。</p>
-                <a href="https://github.com/piscesweilun/HandyPJC-Support/issues" target="_blank">建立 Issue</a>
+                <a href="https://github.com/piscesweilun/HandyPJC-Support/issues" target="_blank" rel="noopener noreferrer">建立 Issue</a>
             </div>
         </div>
+
+
+        <section data-platform="android">
+            <h2>Android 支援</h2>
+            <p>前往 <a href="https://play.google.com/store/apps/details?id=com.PiscesStudio.HandyPJC" target="_blank" rel="noopener noreferrer">Google Play 下載掌中投控</a>。Android 版亦以 Handy PJC 顯示（套件名稱：<code>com.PiscesStudio.HandyPJC</code>）。</p>
+            <div class="faq-item"><h3>如何連接投影機？</h3><p>請讓 Android 裝置與投影機連接同一個區域網路，開啟投影機的 PJLink 或網路控制，並確認 IP 位址與 PJLink 密碼。若搜尋不到設備，請檢查是否使用訪客 Wi-Fi 或啟用了用戶端隔離；若目前版本提供手動新增，也可嘗試輸入 IP 位址。</p></div>
+            <div class="faq-item"><h3>相容性、功能與廣告</h3><p>裝置相容性與目前 Android 版本的功能請參閱 Google Play 說明。下方 iOS 的 Apple Watch、iCloud 與 Pro 購買操作不適用於 Android。是否顯示廣告依您安裝的版本而定。</p></div>
+            <div class="faq-item"><h3>如何回報 Android 問題？</h3><p>請附上 Android 版本、裝置型號、掌中投控版本、投影機型號，以及發生問題的操作步驟。請勿提供密碼或其他私人資訊。</p></div>
+        </section>
+        <h2 data-platform="ios">iOS 支援</h2>
+        <div class="version-callout">
+            <span class="version-label">iOS 3.0</span>
+            <div>
+                <strong>掌中投控現已支援 Apple Watch。</strong>
+                <p>從手腕執行置頂場景、查看場地健康、管理維護資訊，並分別控制關閉影像或聲音靜音。</p>
+            </div>
+        </div>
+
+        <p>以下說明適用於 iPhone、iPad 與 Apple Watch。</p>
 
         <h2>常見問題</h2>
 
@@ -203,6 +230,7 @@
     <div class="footer-inner">
         <span>© 2026 Pisces Studio. All rights reserved.</span>
         <div class="footer-links">
+            <a href="copyright.html" id="footer-copyright">Copyright</a>
             <a href="privacy.html" id="footer-privacy">Privacy Policy</a>
             <a href="support.html" id="footer-support">Support</a>
         </div>
@@ -212,13 +240,15 @@
 <script>
 const i18n = {
     en: {
+        'nav-copyright': 'Copyright', 'footer-copyright': 'Copyright',
         'nav-privacy': 'Privacy', 'nav-support': 'Support', 'nav-name': 'HandyPJC',
-        'page-title': 'Support', 'page-sub': "We're here to help you get the most out of HandyPJC.",
+        'page-title': 'Support', 'page-sub': "Setup and troubleshooting for HandyPJC on iOS and Android.",
         'footer-privacy': 'Privacy Policy', 'footer-support': 'Support'
     },
     zh: {
+        'nav-copyright': '版權', 'footer-copyright': '版權聲明',
         'nav-privacy': '隱私權', 'nav-support': '支援', 'nav-name': '掌中投控',
-        'page-title': '支援', 'page-sub': '我們在這裡協助您充分利用掌中投控。',
+        'page-title': '支援', 'page-sub': '掌中投控 iOS 與 Android 版的設定、疑難排解與聯絡資訊。',
         'footer-privacy': '隱私權政策', 'footer-support': '支援'
     }
 };
@@ -235,13 +265,22 @@ function setLang(lang) {
     document.querySelector(`.lang-switch a[onclick="setLang('${lang}')"]`).classList.add('active');
     document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : 'en';
     localStorage.setItem('lang', lang);
+    document.querySelectorAll('[data-platform]').forEach(el => {
+        if (el.closest('#content-' + lang)) el.id = el.dataset.platform;
+        else el.removeAttribute('id');
+    });
 }
 
 (function() {
     const saved = localStorage.getItem('lang');
-    if (saved) { setLang(saved); return; }
+    if (saved === 'en' || saved === 'zh') {
+        setLang(saved);
+        if (location.hash === '#android' || location.hash === '#ios') document.querySelector(location.hash)?.scrollIntoView();
+        return;
+    }
     const browserLang = navigator.language || navigator.userLanguage;
-    if (browserLang && browserLang.startsWith('zh')) setLang('zh');
+    setLang(browserLang && browserLang.startsWith('zh') ? 'zh' : 'en');
+    if (location.hash === '#android' || location.hash === '#ios') document.querySelector(location.hash)?.scrollIntoView();
 })();
 </script>
 </body>

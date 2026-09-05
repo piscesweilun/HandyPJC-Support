@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copyright — HandyPJC</title>
+    <meta name="description" content="Copyright and official app links for HandyPJC on iOS and Android.">
+    <meta property="og:image" content="assets/app-icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo"><img src="assets/app-icon.png" alt="" class="nav-app-icon"> <span id="nav-name">HandyPJC</span></a>
+        <div class="nav-links">
+            <a href="privacy.html" id="nav-privacy">Privacy</a>
+            <a href="support.html" id="nav-support">Support</a>
+            <a href="copyright.html" class="active" aria-current="page" id="nav-copyright">Copyright</a>
+            <div class="lang-switch">
+                <a href="#" class="active" onclick="setLang('en')">EN</a>
+                <a href="#" onclick="setLang('zh')">中文</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="content">
+    <h1 id="page-title">Copyright</h1>
+    <p class="updated" id="page-updated">Last updated: September 5, 2026</p>
+
+    <div id="content-en">
+        <h2>HandyPJC / 掌中投控</h2>
+        <p>HandyPJC is developed by Pisces Studio. This copyright notice covers the iOS and Android apps and this support website.</p>
+        <p>© 2026 Pisces Studio. All rights reserved.</p>
+        <h2>Official apps</h2>
+        <ul><li><a href="https://apps.apple.com/app/id1540087282">HandyPJC for iOS — App Store</a></li><li><a href="https://play.google.com/store/apps/details?id=com.PiscesStudio.HandyPJC">HandyPJC for Android — Google Play</a></li></ul>
+        <h2>Third-party names and materials</h2>
+        <p>Third-party product names, trademarks, and materials belong to their respective owners. Third-party software remains subject to its applicable license notices. References to platforms or projector brands identify compatibility and do not imply endorsement.</p>
+        <h2>Copyright enquiries</h2>
+        <p>For questions about using HandyPJC artwork or website content, contact <a href="mailto:piscesweilun.studio@gmail.com">piscesweilun.studio@gmail.com</a>. For app assistance, visit <a href="support.html">Support</a>.</p>
+    </div>
+    <div id="content-zh" style="display:none">
+        <h2>掌中投控 / HandyPJC</h2>
+        <p>掌中投控由 Pisces Studio 開發。本版權聲明適用於 iOS、Android 應用程式及本支援網站。</p>
+        <p>© 2026 Pisces Studio。保留所有權利。</p>
+        <h2>官方應用程式</h2>
+        <ul><li><a href="https://apps.apple.com/app/id1540087282">iOS 版掌中投控 — App Store</a></li><li><a href="https://play.google.com/store/apps/details?id=com.PiscesStudio.HandyPJC">Android 版掌中投控 — Google Play</a></li></ul>
+        <h2>第三方名稱與素材</h2>
+        <p>第三方產品名稱、商標及素材屬於各自權利人。第三方軟體仍依其適用的授權聲明提供。提及平台或投影機品牌是為了說明相容性，不代表取得該品牌的背書。</p>
+        <h2>版權相關聯絡</h2>
+        <p>如需詢問掌中投控圖像或網站內容的使用，請聯絡 <a href="mailto:piscesweilun.studio@gmail.com">piscesweilun.studio@gmail.com</a>。App 操作問題請參閱<a href="support.html">支援頁面</a>。</p>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <span>© 2026 Pisces Studio. All rights reserved.</span>
+        <div class="footer-links">
+            <a href="copyright.html" id="footer-copyright">Copyright</a>
+            <a href="privacy.html" id="footer-privacy">Privacy Policy</a>
+            <a href="support.html" id="footer-support">Support</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+const i18n = {
+    en: {
+        'nav-copyright': 'Copyright', 'footer-copyright': 'Copyright',
+        'nav-privacy': 'Privacy', 'nav-support': 'Support', 'nav-name': 'HandyPJC',
+        'page-title': 'Copyright', 'page-updated': 'Last updated: September 5, 2026',
+        'footer-privacy': 'Privacy Policy', 'footer-support': 'Support'
+    },
+    zh: {
+        'nav-copyright': '版權', 'footer-copyright': '版權聲明',
+        'nav-privacy': '隱私權', 'nav-support': '支援', 'nav-name': '掌中投控',
+        'page-title': '版權聲明', 'page-updated': '最後更新：2026 年 9 月 5 日',
+        'footer-privacy': '隱私權政策', 'footer-support': '支援'
+    }
+};
+
+function setLang(lang) {
+    const data = i18n[lang];
+    for (const [id, text] of Object.entries(data)) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = text;
+    }
+    document.getElementById('content-en').style.display = lang === 'en' ? 'block' : 'none';
+    document.getElementById('content-zh').style.display = lang === 'zh' ? 'block' : 'none';
+    document.querySelectorAll('.lang-switch a').forEach(a => a.classList.remove('active'));
+    document.querySelector(`.lang-switch a[onclick="setLang('${lang}')"]`).classList.add('active');
+    document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : 'en';
+    localStorage.setItem('lang', lang);
+}
+
+(function() {
+    const saved = localStorage.getItem('lang');
+    if (saved === 'en' || saved === 'zh') { setLang(saved); return; }
+    const browserLang = navigator.language || navigator.userLanguage;
+    if (browserLang && browserLang.startsWith('zh')) setLang('zh');
+})();
+</script>
+</body>
+</html>

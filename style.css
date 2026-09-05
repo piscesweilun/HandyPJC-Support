@@ -142,6 +142,7 @@ body {
 
 .hero-actions {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
   margin-top: 28px;
@@ -421,5 +422,18 @@ body {
   .support-grid { grid-template-columns: 1fr; }
   .version-callout { flex-direction: column; gap: 12px; }
   .footer-inner { flex-direction: column; gap: 12px; }
-  .nav-links a:not(.lang-switch a) { display: none; }
+  .nav-inner { flex-wrap: wrap; gap: 12px; padding: 12px 16px; }
+  .nav-links { flex-wrap: wrap; gap: 4px; width: 100%; justify-content: space-between; }
+  .nav-links a { padding: 6px 8px; }
+  .lang-switch { margin-left: 0; }
 }
+
+/* Shared iOS / Android support */
+.platform-intro { padding-top: 0; padding-bottom: 36px; }
+.platform-intro h2 { margin-top: 0; }
+.platform-jumps { justify-content: flex-start; margin-bottom: 28px; }
+[data-platform] { scroll-margin-top: 140px; }
+.content code, .support-card a { overflow-wrap: anywhere; }
+.policy-scope { padding: 20px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-card); }
+.footer-links { flex-wrap: wrap; justify-content: center; }
+a:focus-visible { outline: 2px solid var(--accent-light); outline-offset: 4px; }
